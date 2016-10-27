@@ -1,0 +1,90 @@
+@font-face{
+	font-family: 'Bebas Neue Regular';
+	src: url('../fonts/bebas-neue-regular/BebasNeue Regular.ttf');
+}
+@font-face{
+	font-family: 'Avenir Next';
+	src: url('../avenir-next-lt-pro/AvenirNextLTPro-Bold.otf');
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+    padding: 0;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td, section {
+    padding: 0;
+    margin: 0;
+}
+
+/****  fonts ****/
+
+p{
+	font-family: $font-Oxygen;
+	font-weight:100;
+	line-height: 1.8;
+	font-size: 1.15rem;
+	z-index:3!important;
+}
+h2{
+	font-size: 5.7rem;
+}
+
+h2,h3,h4,h5,h6{
+	font-family: 'Bebas Neue Regular', sans-serif;
+	margin: 0px;
+	z-index:3!important;
+}
+
+
+  /* seleccion */
+::-moz-selection { color: white;  background: black; }
+::selection      { color: white;  background: black; } 
+
+ /** scroll y efecto */
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.pd-8{
+	padding-top:8%;
+}
+.pdt-8{
+	padding-top:8%;
+}
+.pd-tb-4{
+	padding:4% 0%;
+}
+.pd-lr-4{
+	padding:0% 4%;
+}
+.pd-2{
+	margin-top:2rem;
+}
+.mg-2{
+	margin:2rem;
+}
+.w-500{
+	font-weight:600;
+}
+.txt-verde{
+	color:$txt-verde;
+}
+.txt-negro{
+	color:black;
+}
+.btn-verde{
+	background:$bg-verde;
+}
+.row, .col, .waves-effect, h2{
+	z-index:3;
+}
+.fp-controlArrow{
+	border-color:$bg-verde;
+}
+.white{
+	color:white;
+}

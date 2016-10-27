@@ -1,0 +1,631 @@
+.controlArrow.prev{left:10px; z-index:1000}
+.controlArrow.next{right:10px; z-index:1000}
+
+#changingword{
+    color: white;
+    text-shadow:  5px -1px 4px rgba(0, 0, 0, 1);
+    font-family: $font-Oxygen;
+    font-size:3rem;
+}
+.intro{
+	color:$txt-verde;
+	font-size:8rem;
+	font-weight:900;
+	font-family:'Avenir Next', sans-serif;
+	text-shadow:  5px 5px 2px rgba(0, 0, 0, 1);
+}
+
+/***Header Deslizable**/
+.main-nav{
+	background: $bg-verde;
+	border-right: 0.01em solid rgba(216, 214, 214, 0.9);
+	height:100vh;
+	left:-35vw;
+	line-height: 44px; 
+	transition: all .5s;
+	width: 35vw;
+	z-index: 1000;
+	position:fixed;
+}
+.menu{
+	list-style:none;
+	margin:0;
+	padding:7em 0.5em;
+}
+
+.menu__item{
+	align-items:center;
+	display:flex;
+	justify-content:flex-end;
+	margin:0 15px;
+	.menu__link{
+		padding-right: 1rem;
+		span{
+			font-family: $font-bebas;
+			text-decoration:none;
+		}
+		.nav-text{
+			font-family: $font-bebas;
+			color:white;
+			font-size: 1.8rem;
+		}
+		.subir, .bajar{
+			font-size: 0.9rem;
+			position: relative;
+			top:-10px;
+			color:black;
+		}
+	}
+}
+
+.menu__link:hover{
+	padding-right: 0rem;
+	-webkit-transition: all .6s;
+	transition:all .6s;
+}
+
+/**Menu Barra -> X ***/
+.menu-bar{
+	border-radius:50px;
+	border:0.5px solid white;
+	height:40px;
+	padding:8px 4px;
+	position:absolute;
+	right:-120px;
+	top:50px;
+	width:40px;
+
+}
+
+.mover{
+	right:-60px;
+}
+.uno, .dos, .tres{
+	background:white;
+	height:1.1px;
+	margin:5px;
+	width:65%;
+	transition: all 0.5s;
+}
+.mostrar{
+	left:0px;
+	.uno{
+		transform: rotate(45deg) translate(4px,6px);
+	}
+	.dos{
+		opacity: 0;
+	}
+	.tres{
+		transform: rotate(-45deg) translate(2px,-5px);
+	}
+}
+
+/**Menu Parallax **/
+#nav-parallax{
+	background:none;
+	border-right: 0.01em solid rgba(47, 41, 41, 0.21);
+	height: 100vh;
+	left: 0em; 
+	position:fixed;
+    width:5%; 
+    z-index: 100;
+}
+
+.nav{
+	position:relative;
+	top:20%;
+	.menu_item{
+	position:relative;
+	padding-left:2rem;	
+		.hover-nav{
+			position:relative;
+			padding-left: 3rem;
+			width: 12rem;
+			span{
+				position: relative;
+				font-family:$font-Oxygen;
+				font-size: 0.8rem;
+				color:$txt-white;
+			}
+			span:last-child{
+				display: none;
+				right: -2rem;
+			}
+		}
+	}
+}
+/*** Efectos de Hover **/
+.nav{
+	.active{
+		padding-left: 0rem!important;
+		transition: all .5s;
+		span{
+			color:#000000!important;
+		}
+		.hover-txt{
+			display:inline-block!important;
+		}
+	}
+}
+
+.hover-nav:hover .hover-bajar{
+    bottom: -3px;
+    left: 1.5; 
+}
+.hover-nav:hover .hover-subir{
+   left: 1.5;
+    top:-3px;
+}
+.hover-nav:hover .hover-txt{
+	display:inline-block!important;
+}
+/**logo*/
+.logo{
+	//position:fixed;
+	top:0;
+	width:60%;
+	//background:red;
+	.logo-vooxel{
+		display: table;
+		margin:auto;
+		//background: green;
+		//padding-top: ;
+		.VOOXELL{
+			width: 30rem;
+			height: 10rem;
+			z-index: 1000;
+			-webkit-transition: width .5s, height .5s, margin .5s;
+		}
+	}
+}
+
+
+/*  --------------------------------------------- */
+/* Large screen layout ----------- */  
+/* slide layout --------------------------------------------- */
+#particles{
+	width: 100%;
+	height:950vh;
+	position:fixed;
+	z-index:2;
+	opacity:0.3;
+	//float:left;
+}
+
+/**** Personalizacion de section */
+
+#fullpage{
+	section:nth-child(2){
+		background:$bg-black;
+		h2{
+			color:white;
+		}
+		p{
+			color:white;
+			font-size: 1.2rem;
+		}
+	}	
+	section:nth-child(3){
+		background:$bg-black;
+		h2{
+			color:white;
+		}
+		p{
+			color:white;
+		}
+	}
+	section:nth-child(4){
+		background:$bg-white;
+		span{
+			color:$bg-verde;
+			font-family:$font-bebas;
+			font-size: 2rem;
+			font-weight: 600;
+		}
+		h2{
+			color:black;
+		}
+	}
+	section:nth-child(5){
+		background:$bg-verde;
+		h2{
+			color:white;
+		}
+		h4{
+			color:white;
+		}
+		p{
+			color:white;
+		}
+	}
+	section:nth-child(6){
+		background:$bg-black;
+		p{
+			color:white;
+		}
+		h2{
+			color:white;
+		}
+
+	}
+	section:nth-child(7){
+		background:$bg-white;
+		h2{
+			color:black;
+			margin-bottom: 0;
+			padding-top: 0;
+		}
+		p{
+			color:black;
+		}
+	}
+	section:nth-child(8){
+		background:$bg-verde;
+	    height: 100vh;
+		.slider{
+		}
+		h2{
+			color:white;
+		}
+		a{
+			margin:1rem;
+			border-radius:55px;
+		}
+	}
+	section:nth-child(9){
+		background:$bg-white;
+	    height: 100vh;
+		h3{
+			font-family:$font-bebas;
+		}
+		a{
+			margin:1rem;
+			border-radius:55px;
+		}
+	}
+}
+
+/**** texto para el cuerpo y titulo **/
+
+/** SLIDER 1 */
+.modal-trigger, .modal{
+	z-index:1000;
+}
+/**  Nuestros servicios **/
+.circle{
+	display:inline-block;
+	height:3rem;
+	width:3rem;
+	background:$bg-verde;
+	border-radius:50%;
+	z-index:3;
+	.check{
+    	position: relative;
+   	 	top: 0.2rem;
+    	left: 0.6rem;
+    	color:white;
+	}
+}
+.circle:hover .check{
+	color:$bg-verde;
+}
+.circle:hover{
+	background:black;
+}
+/*********  pilares ******/
+.ico-img{	
+	img{
+		background: white;
+		height:5.5rem;
+		width:5.5rem;
+	}
+}
+.ico-img:hover{
+	img{
+		background:black;
+		z-index:4;
+	}
+}	
+
+/*** Perfiles */
+.Perfiles-js{
+	position:float;
+	z-index:3;
+	right:0;
+	.nav{
+		position: absolute;
+    	top: 30%;
+   		right: 10%;
+		ul{
+			li{
+				position: relative;
+				z-index:3;
+				.active{
+					opacity: 1;
+					color:white;
+				}
+				a{
+					font-family:$font-bebas;
+					font-size: 2rem;
+					background: none;
+					width: 8rem;
+					color:white;
+					opacity: 0.2;
+				}
+
+				span{
+					background: white;
+					color:white;
+					}
+			}
+			li:hover a{
+				color:white;
+				opacity: 1;
+			}
+	
+			li:hover .linea{
+				background: white;
+				color:white;
+				display: inline-block;
+				height: 0.05rem;
+				margin-left: 6px;
+				position: absolute;
+				right: -2.5rem;
+				top: 1rem;
+				width:2rem;
+			}
+		}
+	}
+}
+.mix{
+	display: none;
+		
+}
+#Container{
+	padding-top:30rem;
+	max-height:30rem;
+	display:flex;
+	.mix{
+		margin:2px;
+		margin-bottom: 5px;
+		position: absolute;
+		z-index: 3;
+		height: 8rem;
+		width: 8rem;
+		margin:auto;
+		-webkit-perspective: 700;
+		.carta{
+			height: 100%;
+			width:100%;
+			position: relative;
+			transform-style: preserve-3d;
+			box-shadow:0px 0px 5px black;
+			border-radius:50%;
+		}
+		.carta:hover{
+			transform: rotateY(180deg);
+			transition: 1s;
+		}
+		.lado{
+			border-radius:50%;
+			width:100%;
+			height: 100%;
+			backface-visibility: hidden;
+			position: absolute;
+			border:2px solid white;
+		}
+		.frente{
+			background: crimson;
+		}
+		.atras{
+			background: $bg-verde;
+			transform: rotateY(180deg);
+		}
+		img{
+			width:100%;
+			height: 100%;
+		}
+
+   		.perfil-hover{
+   			display: none;
+   		}
+	}
+	.mix:hover .perfil-hover{
+		display: inline-block;
+		position: relative;
+		top:20%;
+		left: 20%;
+
+	}
+	.consultor:first-child, .desarrollo:nth-child(7), .experto:nth-child(13), .ventas:nth-child(19){
+		@include Perfil_Title_tr(50%,50%); 
+	}
+	.consultor:nth-child(2), .desarrollo:nth-child(8), .experto:nth-child(14), .ventas:nth-child(20) {
+		@include Perfil_Title_tr(10%,45%); 
+	}
+	.consultor:nth-child(3), .desarrollo:nth-child(9), .experto:nth-child(15),.ventas:nth-child(21) {
+		@include Perfil_Title_tr(10%,20%); 
+	}
+	.consultor:nth-child(4), .desarrollo:nth-child(10), .experto:nth-child(16),.ventas:nth-child(22) {
+		@include Perfil_Title_tl(10%,20%); 
+	}
+	.consultor:nth-child(5), .desarrollo:nth-child(11), .experto:nth-child(17),.ventas:nth-child(23) {
+		@include Perfil_Title_br(10%,20%); 
+	}
+	.consultor:nth-child(6), .desarrollo:nth-child(12), .experto:nth-child(18),.ventas:nth-child(24) {
+		@include Perfil_Title_bl(10%,20%); 
+	}
+}
+/***Clientes**/
+.carousel{
+	z-index:3;
+	.carousel-item{
+		top:-23%;
+		img{
+			height: 100%;
+			border:1px solid $bg-verde;
+			box-shadow: 1px 1px 1px $bg-verde;
+			//opacity: 0.7;
+		}
+		.nombre-cliente{
+			position: absolute;
+			background: $bg-verde;
+			top:0%;
+			left:0%;
+		}
+		.modal-trigger{
+			display: none;
+			background: black;
+			position: absolute;
+			top:50%;
+			left:-5%;
+		}
+		.modal{
+			width: 300%;
+			height: 150%;
+			padding: 5%;
+			z-index:1000;
+		}
+	}
+	.modal-content{
+		.lista{
+			padding-left: 20px;
+			li{
+				list-style-image: url("../img/vooxel/faviconSinFondo.ico");
+				font-size: 1rem;
+			}
+		}
+	}
+	.carousel-item:hover .modal-trigger{
+		display: inline-block;
+		left:15%;
+		webkit-transition: all 3s;
+
+	}
+	.carousel-item:hover img{
+
+		webkit-transition: all 1s;
+
+	}
+
+}
+
+
+
+/** Partner **/
+.contenedor-inicial{
+	float:left;
+
+}
+.tablet{
+	margin: auto 10%;
+   	border: 3px solid #6f6a6a;
+    border-radius: 2rem;
+    padding: 1rem 3rem 2.5rem;
+    background:  rgba(226,226,226,1);
+    position: relative;
+    z-index: 3;
+    box-shadow: 0px 4px 4px 4px #448050;
+    .contenido{
+    	border: 2px solid black;
+    	.slides{
+    		height:100%!important;
+    		li{
+    			height: 100%;
+    		}
+    	}
+    }
+}
+.tablet::before{
+	margin-bottom:1rem;
+	content:"";
+	display:inline-block;
+	width:1rem;
+	height:1rem;
+	background:black;
+	border-radius:50%;
+ }
+.tablet::after{
+	content:"Vooxell";
+	font-weight:bold;
+	color:gray;
+ }	
+
+
+
+/* Contactanos */
+#form1, #form2{
+	display:none;
+	position:absolute;
+	top:3%;
+	left:0;
+	z-index:100000;
+	width:100%;
+	background:$bg-white;
+	h4{
+		color:$txt-verde;
+		display: inline-block;
+	}
+	.btn-cerrar{
+		padding-top:5px;
+	}
+	textarea, button{
+		background:$bg-verde;
+	}
+	.btn-cerrar{
+		background: $bg-white;
+		border: 1px solid gray;
+		.icon{
+			color:gray;
+		}
+	}
+}
+
+.red_contacto{
+	padding-top:20%;
+	display:flex;
+	justify-content:space-between;
+	flex-wrap: wrap;
+	z-index: 100000;
+	a{
+		display: flex;
+		align-items: stretch;
+	}
+
+}
+.icon-contacto{
+	width:100%;
+	z-index:1000;
+	a{
+		z-index:1000000;
+		color:black;
+		i{
+		color:black;
+		z-index:1000000;
+		}	
+	}
+	a:hover i, a:hover span{
+		
+		color:$bg-verde;
+		margin-bottom: 5px;
+	}
+	.icon{
+		display: inline-block;
+		width:2rem;
+		height: 1.5rem;
+		color:black;
+		fill:black;
+	}
+	.icon:hover{
+		color:$txt-verde;
+		fill:$txt-verde;		
+	}
+	.cell{
+		font-size: 1.5rem;
+	}
+	.cell:hover{
+		color:$txt-verde;
+	}
+}
+
+
