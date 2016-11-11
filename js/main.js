@@ -1,18 +1,3 @@
-      fullpage.initialize('#fullpage', {
-        anchors: ['slide-1', 'slide-2', 'slide-3', 'slide-4', 'slide-5', 'slide-6'],
-        menu: '#nav-parallax',
-        verticalCentered: false,
-        easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)',
-        slidesNavigation: true,
-        navigation: false,
-
-      });
-
-
-
-
-
-
   $('#menu-des').on('click',function(){
     $('#main-nav').toggleClass('mostrar')
     $('#menu-des').toggleClass('mover')

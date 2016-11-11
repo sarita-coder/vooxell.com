@@ -241,7 +241,17 @@
     </div>
     <script src="js/jquery.js"></script>
     <script src="js/materialize.min.js"></script>
-    <script src="js/javascript.fullPage.min.js"></script>
+    <script src="js/javascript.fullPage.js"></script>
+	<script type="text/javascript">
+	    fullpage.initialize('#fullpage', {
+        anchors: ['slide-1', 'slide-2', 'slide-3', 'slide-4', 'slide-5', 'slide-6'],
+        menu: '#nav-parallax',
+        verticalCentered: false,
+        easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)',
+        slidesNavigation: true,
+        navigation: false,
+      });
+	</script>
     <script src="js/main.js"></script>
     <script src="js/particles.min.js"></script>
     <script src="js/cubo-verde.js"></script>
