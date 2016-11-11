@@ -26,3 +26,21 @@
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
+
+@mixin background ($folder:style1, $img:file, $type:png, $repeat:no-repeat) {
+    background-image: url(../img/#{$folder}/#{$img}.#{$type});
+    background-repeat: #{$repeat};
+    background-position: center;
+    background-size:100% 100%;
+}
+@mixin txt_h2 ($color){
+	color:$color;
+	text-shadow: 2px 2px 2px #403d3d;
+	
+}
+@function restov(){
+	@return -(8rem - $border-width);
+}
+@function restoH(){
+	@return (8rem - $border-width);
+}

@@ -1,60 +1,192 @@
-
-@media (max-width: 768px) {
-
+@media (max-width: 770px) {
+  .fp-controlArrow.fp-prev , .fp-controlArrow.fp-next {
+    visibility:visible;
+  }
   h2{
-    font-size: 2.1rem;
+    font-size: 2rem;
+  }
+  h3{
+    font-size: 1.2rem;
   }
   h4{
     font-size: 1.3rem;
   }
   p{
     font-size: 1rem;
-    line-height: 1.3;
+    line-height: 1;
   }
   .pd-8, .pd-2, .pd-lr-4, .mg-2{
     padding:2%;
     margin:0%;
   }
+  /*** NAVEGADOR**/
+  .mostrar {
+    width: 75vw;
+  }
+  .menu__item {
+    line-height: 1.4;
+  }
+  .menu__item .menu__link .nav-text {
+    font-size:1.5rem;
+   }
   .mg-responsive-5{
     margin-top:5%;
   }
   #nav-parallax{
     display: none;
   }
-  .slide{
-    margin:0px;
-    width:100%;
+  .VOOXELL {
+    width: 74%;
   }
-  .vh-100{
-  height:100%;
+  #menu-des{
+    background:black;
+    right: -65px;
+    top: 15PX;
   }
-  /**** barra de menu para smarphone **/
-  .main-nav{
-    width: 75vw;
-    left: -75vw;
+  #fullpage{
+    section{
+      height:100vh;
+      .title{
+        text-align: left;
+      }
+      h2{
+        font-size: 2rem;
+      }
+      h3{
+        font-size: 1.2rem;
+      }
+      .logo-small{
+        height: 3rem;
+        position: absolute;
+        bottom:0.5%;
+        right: 0.3%;
+      }
+      .logo-small-blanco{
+        height: 2.6rem;
+      }
+    }
+    section:nth-child(1){
+      background-size:cover;
+      p{
+        font-size:1.2rem;
+      }
+    } 
+    section:nth-child(2){
+      background-size:cover;
+    }
+    section:nth-child(3){
+      background-size:cover;
+      span{
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      a{
+        font-size:1.1rem;
+      }
+    }
+    section:nth-child(4){
+      background-size:cover;
+      padding:0  0;
+    }
+    section:nth-child(5){
+      background-size:cover;
+      margin-top: 0.5rem;
+      
+    }
+    section:nth-child(6){  
+      h2{
+        margin: 1rem 0;
+      }
+    } 
   }
-  .menu-bar {
-    right: -60px;
-    top: 20px;
+  .formulario {display:none}
+  .sobreNosotros  .bg, .Servicios .bg, .alianza .bg {
+      padding: 30% 5% 5%;
+      background:linear-gradient(0deg, rgb(50, 50, 51), rgba(255, 254, 254, 0));
+
+      .position {
+        width:65%;
+        button{
+          span{
+            .hover{
+              height:1rem;
+              display: inline-block;
+            }
+            .sin-hover{
+              display: none;
+            }
+          }
+          a{
+            font-size:1.1rem;
+          }
+        }
+      }
   }
-  .mostrar{
-    left:0px;
+ #BI button, #DA button, #CE button{
+    top:3%;
+    right:8%;
+    z-index:4;
   }
-  .logo{
-    .logo-vooxel{
-      padding-top:60%;
-      .VOOXELL{
-        width:90vw;
+  .centando-servicios{
+    display:flex;
+    align-items:center;
+        height:100vh;
+  }
+  .centrando{
+
+    margin:0;
+    .servicio{
+      .lado{
+        height:22rem;
+      }
+      .izquierda{
+
       }
     }
   }
-  .circle{
-    height:1rem;
-    width:1rem;
-    .check{
-      font-size:12px;
-      top: -1.3rem;
-      left: 0.05rem;
+  .Pilares{
+    background-size:100% 100%;
+    @include background(bg,experiencia,jpg);
+    .pilar{
+      display:none;
+    } 
+  }
+  .slide1{
+    display:visible;
+    @include background(bg,excelencia,jpg);
+    background-size:100% 100%;
+  }
+  .slide2{
+    display:visible;
+    @include background(bg,eficiencia,jpg);
+    background-size:100% 100%;
+  }
+
+  .contenedor-alianza{
+    padding: 0.3rem 0;
+    .col-s5{ 
+      width: 40%;
+      img{
+        height:2.5rem;
+      }
+    }
+
+  }
+  .icon-contacto{
+    margin-top:0;
+   li {
+    margin-bottom: 0.8rem;
+    }
+    .siguenos{
+      span{
+        margin-left:1.3rem;
+      }
+      a{
+        display: inline-block;
+        width: 3rem;
+        margin-left:0;
+        text-align:center;
+      }
     }
   }
 
@@ -63,46 +195,9 @@
 
 
 
-
-
-  
-  /*** ervicios **/
-
-
-
-  .Numero{
-    font-size:1rem;
-  }
-  .tablet{
-    padding: 0.5rem 1.3rem 2rem;
-  }
-
-  .fp-controlArrow{
-    top:65%!important;
-  }
-  
-  .txt, .btn-contact {
-    margin-top:1.5rem;
-    z-index:5!important;
-  }
-  .form{
-    margin-top:5rem;
-    z-index:1000000!important;
-  }
-  /***Contacto***/
-
-  .red_contacto{
-    padding-top:0%;
-  }
-
 }
 
+@media (max-width: 300px) {
 
-@media (max-width: 350px) {
-  .ico-img{
-    display:none;
-  }
 
 }
-
-  
