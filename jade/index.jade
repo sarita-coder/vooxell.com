@@ -18,11 +18,12 @@ html(lang="en")
 				+nav_des(1,"","#slide-3","link-3","0","2","NUESTROS SERVICIOS ","#section3")
 				+nav_des(1,"","#slide-4","link-4","0","3","NUESTROS PILARES ","#section4")
 				+nav_des(1,"","#slide-5","link-5","0","4","ALIANZAS ESTRATÉGICAS","#section5")
-				+nav_des(1,"","#slide-6","link-6","0","5","CONTACTOS ","#section6")				
+				+nav_des(1,"","#slide-6","link-6","0","5","CONTACTOS ","#section6")
+				+nav_des(0,"ei-sc-twitter","https://twitter.com/intent/tweet?url=http://www.vooxell.com&text=Voxell.com: You have data, we give you a new dimension.","white","","","")
+				+nav_des(0,"ei-sc-facebook","","white","","","")
+				
 			.menu-bar#menu-des(onclick="Materialize.showStaggeredList('#main-nav.main-nav')")
 				#irarriba.uno.bar
-				.uno.bar
-
 				.dos.bar
 				.tres.bar
 
@@ -33,7 +34,8 @@ html(lang="en")
 				+nav-parallax("slide-3","slide-3","0","2","Nuestros Servicios ")
 				+nav-parallax("slide-4","slide-4","0","3","Nuestros Pilares ")
 				+nav-parallax("slide-5","slide-5","0","4","Alianzas Estratégicas")
-
+				+nav-parallax("slide-6","slide-6","0","5","Contactos ")
+		
 		#fullpage
 			section.section.section-1
 				#particles
@@ -124,7 +126,7 @@ html(lang="en")
 										img(src="img/partner/ibm-small.jpg")
 
 			section.section.section-6
-				img.logo-small.logo-small(src="img/bg/logo-small.png")
+				img.logo-small.logo-small-blanco(src="img/bg/logo-small-blanco.png")
 				.bg-contacto
 					.container
 						.row
@@ -171,7 +173,6 @@ html(lang="en")
 										.btnpost
 											span.info-obli * Información obligatoria
 											button.btn(type="submit" name="btnsend" id="btnsend" value="ENVIAR") Enviar
-
 
 
 		script(src="js/jquery.js")

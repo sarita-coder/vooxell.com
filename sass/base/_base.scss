@@ -31,23 +31,14 @@ form,fieldset,input,textarea,p,blockquote,th,td, section {
 }
 body{
 	//background-image: url('../img/demo.jpg');
-	background:linear-gradient(black, $plomo);
-
-<<<<<<< HEAD
-=======
-body{
-	//background-image: url('../img/demo.jpg');
 	background:$negro;
 
->>>>>>> master
 
 }
 /****  fonts ****/
 
 p{
 	font-family:$font-segoeui;
-<<<<<<< HEAD
-=======
 	font-weight:100;
 	line-height: 1.1;
 	font-size: 1.3rem;
@@ -61,24 +52,6 @@ h2{
 h2,h3,h4,h5,h6{
 	line-height:1.1;
 	font-family:$font-segoeui-bold;
-	margin: 0px;
-
-p{
-	font-family: $font-Oxygen;
->>>>>>> master
-	font-weight:100;
-	line-height: 1.1;
-	font-size: 1.3rem;
-	z-index:3!important;
-}
-h2{
-	font-size: 5rem;
-
-}
-
-h2,h3,h4,h5,h6{
-	line-height:1,1;
-	font-family:$font-segoeui-bold;
 	//font-family: 'Bebas Neue Regular', sans-serif;
 	margin: 0px;
 	//z-index:3!important;
@@ -86,10 +59,8 @@ h2,h3,h4,h5,h6{
 
 
   /* seleccion */
-::-moz-selection { color: white;  background: none; }
-::selection      { color: white;  background: none; } 
-
-
+::-moz-selection { color: white;  background: black; }
+::selection      { color: white;  background: black; } 
 
  /** scroll y efecto */
 
@@ -108,11 +79,6 @@ h2,h3,h4,h5,h6{
 }
 .pd-lr-4{
 	padding:4% 4%;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> master
 }
 .pd-2{
 	margin-top:2rem;
@@ -130,35 +96,10 @@ h2,h3,h4,h5,h6{
 	color:black;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> master
 /**control del fullpages horizontal**/
 
 .fp-controlArrow.fp-next{
 	border-color:transparent transparent transparent $bg-verde !important;
-<<<<<<< HEAD
-=======
-}
-.fp-controlArrow.fp-prev{
-	border-color:transparent  $bg-verde transparent transparent !important;
-	z-index:10;
-}
-.white{
-	color:white;
-}
-
-
-.fp-controlArrow.fp-prev , .fp-controlArrow.fp-next {
-	visibility:hidden;
-}
-.btn-verde{
-	background:$bg-verde;
-}
-.row, .col, .waves-effect, h2{
-	z-index:3;
->>>>>>> master
 }
 .fp-controlArrow.fp-prev{
 	border-color:transparent  $bg-verde transparent transparent !important;
