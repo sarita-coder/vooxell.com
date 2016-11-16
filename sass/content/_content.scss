@@ -1,0 +1,759 @@
+/***Header Deslizable**/
+.main-nav{
+	background: $plomo;
+	border-right: 0.01em solid rgba(216, 214, 214, 0.9);
+	height:100vh;
+	left:-35vw;
+	line-height: 44px; 
+	transition: all .5s;
+	width: 35vw;
+	z-index: 1000;
+	position:fixed;
+}
+.menu{
+	list-style:none;
+	margin:0;
+	padding:7em 0.5em;
+}
+
+.menu__item{
+	align-items:center;
+	display:flex;
+	justify-content:flex-end;
+	margin:0 15px;
+	.menu__link{
+		padding-right: 1rem;
+		span{
+			font-family: $font-bebas;
+			text-decoration:none;
+		}
+		.nav-text{
+			font-family: $font-bebas;
+			color:white;
+			font-size: 1.8rem;
+		}
+		.subir, .bajar{
+			font-size: 0.9rem;
+			position: relative;
+			top:-10px;
+			color:black;
+		}
+	}
+}
+
+.menu__link:hover{
+	padding-right: 0rem;
+	-webkit-transition: all .6s;
+	transition:all .6s;
+}
+
+/**Menu Barra -> X ***/
+.menu-bar{
+	box-shadow: 1px 0px 3px 3px rgba(53, 49, 49, 0.28);
+	border-radius:50px;
+	border:0.5px solid white;
+	height:40px;
+	padding:8px 4px;
+	position:absolute;
+	right:-95px;
+	top:50px;
+	width:40px;
+}
+
+.mover{
+	right:-60px;
+}
+.uno, .dos, .tres{
+	background:white;
+	height:1.1px;
+	margin:5px;
+	width:65%;
+	transition: all 0.5s;
+}
+.mostrar{
+	left:0px;
+	.uno{
+		transform: rotate(45deg) translate(4px,6px);
+	}
+	.dos{
+		opacity: 0;
+	}
+	.tres{
+		transform: rotate(-45deg) translate(2px,-5px);
+	}
+}
+
+/**Menu Parallax **/
+#nav-parallax{
+	background:none;
+	border-right: 0.05em solid rgba(47, 41, 41, 1);
+	height: 100vh;
+	left: 0em; 
+	position:fixed;
+    width:3%; 
+    z-index: 10;
+}
+.nav{
+	position:relative;
+	top:25%;
+	.menu_item{
+	line-height:2.7;
+	position:relative;
+	padding-left:2rem;	
+		.hover-nav{
+			position:relative;
+			padding-left: 1rem;
+			width: 12.6rem;
+			span{
+				position: relative;
+				font-family:$font-Oxygen;
+				color:white;
+			}
+			span:last-child{
+				display: none;
+				right: -2rem;
+			}
+		}
+	}
+}
+/*** Efectos de Hover **/
+.nav{
+	.active{
+		padding-left: 0rem!important;
+		transition: all .5s;
+		span{
+			font-size: 1rem;
+			color:white!important;
+			text-shadow: 2px 2px 2px black;
+		}
+		.hover-txt{
+			display:inline-block!important;
+		}
+
+		.slide-2 span {
+			color:black!important;
+			text-shadow: 2px 2px 2px white;
+		}
+		.slide-3 span {
+			color:$verde!important;
+		}
+		.slide-4 span {
+			color:$verde!important;
+		}
+		.slide-5 span {
+			color:white;
+			text-shadow: 2px 2px 2px $morado;
+		}
+	}
+}
+
+.hover-nav{
+	&:hover span{
+		color:$verde!important;
+		text-shadow: 2px 1px 2px rgb(0, 0, 0);
+	}
+	&:hover .hover-bajar{
+    bottom: -3px;
+    left: 1.5; 
+    }
+    &:hover .hover-subir{
+  	 	left: 1.5;
+    	top:-3px;
+	}
+	&:hover  .hover-txt{
+		display:inline-block!important;
+
+	}
+}
+
+/**logo*/
+
+.logo{
+	height:100vh;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+    	font-family: $font-segoeui;
+    	font-size: 2.5rem;
+    }
+}
+.VOOXELL{
+	width:50%;
+}
+/* slide layout --------------------------------------------- */
+#particles{
+	height:100%;
+	width: 100%;
+	position:fixed;
+	opacity:0.5;
+	z-index:0;
+	//float:left;
+}
+.slides1,.slides2 {
+	visibility: hidden;
+}
+
+/**** Personalizacion de section */
+#fullpage{
+	section{
+		position: relative;
+		padding-bottom: 0rem;
+		padding-top: 3rem;
+		text-align: left;
+		.title{
+			text-align: left;
+			.title_h{
+				line-height: 1;
+			}
+		}
+		h2{
+			font-size: 3.5rem;
+		}
+		h3{
+			font-size: 2.5rem;
+		}
+		.logo-small{
+			position: absolute;
+			bottom:0.5%;
+			right: 0.3%;
+			//right: -24%;
+
+		}
+		.logo-small-blanco{
+			height: 6rem;
+		}
+		
+
+	}
+	section:nth-child(1){
+		background: black;
+		padding-top: 0;
+		h2{
+			color:white;
+		}
+		p{
+			color:white;
+		    font-size: 2rem;
+		    padding-bottom: 6%;
+		    line-height:1.2;
+		}
+	}	
+	section:nth-child(2){
+		@include background(bg,somos,jpg);
+
+		h2, h3{
+			@include txt_h2 (white);
+		}
+		p{
+			font-family:$font-segoeui;
+			color:white;
+			text-align: justify;
+
+
+		}
+
+
+		 
+	}
+	section:nth-child(3){
+		@include background(bg,servicio-sin-logo2,jpg);
+		span{
+			color:$bg-verde;
+			font-family:$font-bebas;
+			font-size: 2rem;
+			font-weight: 600;
+		}
+		h2,h3{
+			@include txt_h2 (white);
+		}
+		p{color:white}
+		a{
+			color:white;
+		    font-size: 1.3rem;
+		    font-weight: 500;
+
+		}
+
+		button{
+			background: none;
+			border:none;
+		}
+	}
+	section:nth-child(4){
+		padding-left: 3%;
+		padding-top: 0;
+		h2,h3{
+			@include txt_h2 ($verde);
+		}
+		p{
+			color:white;
+		}
+	}
+	section:nth-child(5){
+		padding-top: 0;
+		@include background(bg,alianzas-sin-logo,jpg);
+		h2,h3{
+			line-height:1;
+			@include txt_h2 (white);
+
+		}
+		p{
+			text-align: justify;
+			margin-top: 1rem;
+			color:white;
+			b{
+				color:white;
+			}
+		}
+		.title{
+			width: 100%;
+		}
+	}
+	section:nth-child(6){
+		padding-top: 0;
+		@include background(bg,final-bg,png);
+		background-color: black;
+		h2, h3{
+			@include txt_h2 (white);
+		}
+		p{
+			text-align: justify;
+			color:white;
+			margin: 0.9rem 0 2rem;
+		}
+		.title{
+			padding-top:5%;
+		}
+		.bg-contacto{
+		    width: 100%;
+		    height: 100%;
+		  	background:  rgba(19, 17, 17, 0.57);
+		   // background: rgba(8, 8, 8, 0.92);
+		}
+	}	
+}
+
+.title-h3{
+    position: relative;
+    top: 2.5rem;
+}
+.sobreNosotros, .contenido{
+	height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+	.bg{
+		background:linear-gradient(0deg, rgba(50, 50, 51, 0.87), rgba(255, 254, 254, 0));
+    	padding: 20% 8% 3%;
+	    .position{
+	    	width:50%;
+	    	p{
+	    		padding-left:0; 
+			}
+	    }
+
+	}
+}
+
+.Servicios{
+	height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+	.bg{
+		background:linear-gradient(0deg, rgba(50, 50, 51, 0.68), rgba(255, 254, 254, 0));
+	    padding: 20% 8% 3%;
+		button{
+			span {
+				img{
+					height: 2rem;
+				}
+				.hover{
+					display: none;
+				}
+				.sin-hover{
+					height: 2.2rem;
+					width:2rem;
+					display: inline-block;
+				}
+			}
+			&:hover a {
+				color:$verde!important;
+		    	text-shadow: 2px 2px 2px #403d3d;
+			}
+			&:hover span .hover{
+				display: inline-block;
+			}
+			&:hover span .sin-hover{
+				display: none;
+			}
+		}
+	}
+}
+.alianza{
+	height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+	.bg{
+		background:linear-gradient(0deg, rgba(50, 50, 51, 0.87), rgba(255, 254, 254, 0));
+    	padding: 20% 8% 1.5%;
+	    .position{
+	    	width:50%;
+	    	p{
+	    		padding-left:0; 
+	    		margin: 0.25rem 0 0.5rem;
+			}
+	    }
+
+	}
+}
+.BI, .DA, .CE{
+	span{
+		margin-right: 0.5rem;
+		i{
+		    height: 1.5rem;
+		    width: 1.5rem;
+		    font-size: 14px;
+		    padding-top: 2px;
+		    border: 2px solid #27fc0d;
+		    color: #27fc0d;
+		    border-radius: 50%;
+
+		}
+	}
+
+}
+
+#BI, #DA, #CE{
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:100000;
+	width:100%;
+	background:$bg-negro;
+	height:100%;
+
+	button{
+	    top: 5%;
+	    position: absolute;
+	    right: 16%;
+	    background: none;
+	    border: none;
+	    i{
+
+	    	color: white;
+    		font-size: 30px;
+	    }
+	}
+}
+
+#btn_cerrar{
+	color:white;
+
+}
+
+
+.Pilares{
+	display:flex;
+	width:100%;
+	height:100%;
+
+	.pilar1{
+		@include background(bg,eficiencia-letra-logo,jpg);
+    	background-position: 15%;
+	}
+	.pilar2{
+		@include background(bg,excelencia-letra-logo,jpg);
+		background-position: 40%;
+	}
+	.pilar3{
+		@include background(bg,experiencia-letra-logo,jpg);
+	}
+	.pilar{
+		width:33.3%;
+		//background-size:cover;
+		position:relative;
+		border: 1px solid $plomo;
+	}
+	.pilar-bg{
+   		background: rgba(14, 14, 14, 0.36);
+		width:100%;
+		height:100%;
+		img{
+			width:5rem;
+			position: absolute;
+			bottom: 5%;
+			left: 5%;
+			visibility: hidden;
+		}
+	}
+	
+}
+.pilar:hover .pilar-bg{
+    background: none;
+
+}
+.pilar:hover .pilar-bg img{
+	visibility:visible;
+    
+}
+.pilar1:hover .pilar-bg{
+	transition:all .3s;
+		@include background(bg,eficiencia-elemento,png);
+	}
+.pilar2:hover .pilar-bg{
+		@include background(bg,excelencia-elemento-logo,png);
+		transition:all .5s;
+}
+.pilar3:hover .pilar-bg{
+		@include background(bg,experiencia-elemento,png);
+		transition:all .5s;
+		filter:alpha(opacity=40);
+}
+.text-bg{
+	h5{
+		color:$verde;
+		text-decoration: underline;
+
+	}
+	p{
+		color:$morado;
+	}
+	position:relative;
+	top:70%;
+	left:10%;
+}
+
+
+
+.centrando{
+	margin-top:5rem;
+}
+.servicio{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5%;
+	.div{
+		width:50%;
+		.lado{
+			width:100%;
+			height: 25rem;
+			padding: 8%;
+			border-color: $bg-verde;
+			border-width: 3px;
+			display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    p{
+		    transform: skewY(10deg);	
+		    }
+		}
+
+		.derecha{
+			overflow:hidden;
+			width:100%;
+			padding-left:0%;
+			transform: skewY(10deg);
+		    border-top-style: dashed;
+		    border-bottom-style: dashed;
+			padding-right: 0;
+		}
+		.izquierda{
+			padding-right:0%; 
+			text-align: justify;
+			border-left-style:  dashed;
+			transform: skewY(-10deg);
+		    border-top-style:dashed;
+		    border-bottom-style:dashed;
+		}
+	}	
+
+}
+
+.bg-alianza{
+	width:100%;
+	height:100%;
+	//background:linear-gradient(rgba(102, 113, 116, 0.81), rgba(62, 56, 56, 0));
+
+	.title_alianza{
+		position: relative;
+		top:-3rem;
+		padding-left: 8%;
+	}
+}
+
+.derecha-BI:after{
+
+	background: url(../vooxell/iNTELIGENCIADENEGOCIOS/45108583.jpg);
+}
+.derecha-CE:after{
+	
+	background: url(../vooxell/CONSULTORIAEXPERTA/23700933.jpg);
+}
+.derecha-DA:after{
+
+	background: url(../vooxell/dESARROLLOAGIL/29730631.jpg);
+}
+.derecha:after{
+    content: " ";
+    background-size: 100% 100%;
+    width: 100%;
+    height: 30rem;
+	height:30rem;
+}
+
+.contenedor-alianza{
+	background:white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+	.col-s5{    
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	   	width: 20%;
+	   	img{
+	   		    height: 3.4rem;
+	   	}
+	}
+}
+
+ 
+
+.form{
+	position:relative;
+	input{
+	margin:0;
+	width:100%;
+
+	}
+	::-webkit-input-placeholder {
+   		color: white;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	   color: white;  
+	}
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: white;  
+	}
+	:-ms-input-placeholder {  
+	   color: white;  
+	}
+	span{
+		color: #fff;
+	    font-size: 10px;
+	    position: absolute;
+	    right: 10px;
+	    top: 6px;
+	}
+ }
+	
+.btnpost{
+	float: right;
+	display: flex;
+	justify-content: center;
+	span{
+		color:white;
+		font-size: 15px;
+		padding: 1.5rem 0.5rem;			
+	}
+	button{
+		color:black;
+		margin-top: 1rem;
+		border-radius:25px;
+		background: white;
+		font-weight: bold;
+		&:hover{
+
+			background: $verde;
+			color:black;
+			
+		}
+	}
+
+}
+
+.text-mail{
+    background-image: url(../img/contact/info.svg);
+}
+.text-cel{
+	background-image: url(../img/contact/tel.svg);
+}
+.text-map{
+	background-image: url(../img/contact/mundo.svg);
+}
+.text-stree{
+	background-image: url(../img/contact/dir.svg);
+}
+
+.icon-contacto{
+	margin-top: 20px;
+	li{
+		padding-left: 40px;
+    	line-height: 30px;
+    	margin-bottom: 30px;
+    	background-repeat: no-repeat;
+    	a{
+    		color:white;
+    		font-size: 1.1rem;
+    	}
+    	&:hover{
+    		opacity: 0.7;
+    	}
+	}
+	span{
+		color:white;
+		margin-left: 5rem;
+		font-size: 1.1rem;
+	}
+	.siguenos{
+		a{
+			display:inline-block;
+			width: 1rem;
+			height: 1rem;
+			margin-left: 1.5rem;
+			i{
+				color:white;
+			}
+			&:hover{
+	    		opacity: 0.7;
+	    	}
+		}
+
+
+	}
+
+}
+//#00ffda;
+input{
+	color: $verde;
+    font-size: 1.8rem!important;
+    border-bottom: 1px solid $verde;
+}
+input:hover, input:focus{
+	border-bottom: 1px solid $verde!important;
+}
+::-webkit-input-placeholder {
+   color: $plomo;
+   	opacity:0.6;
+   	font-size: 1.2rem ;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: $plomo;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $plomo;  
+}
+:-ms-input-placeholder {  
+   color: $plomo;  
+}
+
+
+

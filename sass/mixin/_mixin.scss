@@ -1,0 +1,46 @@
+@mixin Perfil_Title_tr($top,$right){
+	transition:all .9s;
+	top:$top;
+	right:$right;
+}
+@mixin Perfil_Title_tl($top,$left){
+	transition:all .9s;
+	top:$top;
+	left:$left;
+}
+@mixin Perfil_Title_bl($bottom,$left){
+	transition:all .9s;
+	bottom:$bottom;
+	left:$left;
+}
+@mixin Perfil_Title_br($bottom,$right){
+	transition:all .9s;
+	bottom:$bottom;
+	right:$right;
+}
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin background ($folder:style1, $img:file, $type:png, $repeat:no-repeat) {
+    background-image: url(../img/#{$folder}/#{$img}.#{$type});
+    background-repeat: #{$repeat};
+    background-position: center;
+    background-size:100% 100%;
+}
+@mixin txt_h2 ($color){
+	color:$color;
+	text-shadow: 2px 2px 2px #403d3d;
+	
+}
+@function restov(){
+	@return -(8rem - $border-width);
+}
+@function restoH(){
+	@return (8rem - $border-width);
+}

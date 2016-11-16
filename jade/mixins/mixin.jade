@@ -1,0 +1,139 @@
+mixin nav_des(p,i,href,name,subir,bajar,title)
+	li.menu__item
+		if (p==1)
+			a.menu__link(class=name  href=href)
+				spam.nav-text=title
+				span.subir=subir
+				span.bajar=bajar
+		else 
+			a.red-social(target="_blank" href=href)
+				i(class=name data-icon=i)
+
+mixin nav-parallax(name,href,subir,bajar,title)
+	li.menu_item.li.hide-on-med-and-down(data-menuanchor=href)
+		a.hover-nav.menu_link(class=name href='#'+href)
+			span.hover-subir=subir
+			span.hover-bajar=bajar
+			span.hover-txt(class="hover-nav-text-"+bajar)=title 
+
+mixin check(p)
+	.row
+		.pd-2
+			.col.s2.l2
+				span.circle
+					i.material-icons.check done
+			.col.s10.l10
+				p=p
+
+mixin pilar(h3,p1,p2,p3,n)
+	li
+		.ch-item(class='ch-img-'+n+1)
+			.ch-info-wrap
+				.ch-info
+					.ch-info-front(class='ch-img-'+n)
+					.ch-info-back
+							h3=h3
+							p=p1
+							p=p2
+							p=p3
+
+
+mixin perfil(img,name,p,h2,h6,cargo,cel,n,href)
+	.mix(class=name)
+		if (p==1)
+			.hide-on-med-and-down
+				h2=h2
+		else
+			.efecto
+				.efecto2
+			.carta
+				.lado.frente
+					img(src=img)
+				.lado.atras
+					.perfil-hover.hide-on-med-and-down
+						h6=h6
+						p=cel
+						p=cargo
+							a(target="_blank" href=href) linkedin
+					.hide-on-large-only.info-atras
+						h6=h6
+						a(target="_blank" href=href) linkedin
+
+
+
+									
+mixin clientes(src,id,h4,cont,span,p1,p2,p3,p4,p5,p6)
+	.carousel-item
+		img.img-cliente(src=src)
+		a.btn.nombre-cliente
+			span=span
+		a.btn.modal-trigger(href="#"+id)
+			span Proyectos
+	.modal(id=id)
+		.modal-content
+			.row
+				.col.l4.left-align.s12
+					h4=h4
+					img.responsive-img.hide-on-med-and-down(src=src)
+				.col.l8.s12.left-align
+					h5=p1
+					ul.lista
+						if (cont==1)
+							li=p2
+						else if (cont==2)
+							li=p2
+							li=p3
+						else if (cont==3)
+							li=p2
+							li=p3
+							li=p4
+						else
+							li=p2
+							li=p3
+							li=p4
+							li=p5
+							li=p6
+
+mixin linea-responsive(name)
+	.col.s12.linea-responsive(class=name)
+		.separador1
+		.separador2
+
+mixin title_h2(title,sub_title)
+	.title
+		h3.title_h=title
+		h2.title_h=sub_title
+
+mixin directorio(img,name,cargo,mail)
+	.col-s2
+		img(src=img)
+	.col-s3
+		.mail
+			h6=name
+			p=cargo
+			p.ocultar=mail
+
+mixin servicio-item(clase,h3,p)
+	.container
+		.row.mg-2
+			.centrando-servicios
+				button.btn_cerrar
+					i.fa.fa-times  
+				.title-h3.center-align
+					h3=h3
+				.centrando
+					.servicio(class="servicio-"+clase)
+						.div.div1
+							.derecha.lado(class="derecha-"+clase)
+						.div
+							.izquierda.lado
+								p=p
+
+
+
+
+
+
+
+
+
