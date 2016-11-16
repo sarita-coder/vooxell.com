@@ -25,6 +25,7 @@
      -moz-border-radius: $radius;
       -ms-border-radius: $radius;
           border-radius: $radius;
+<<<<<<< HEAD
 }
 
 @mixin background ($folder:style1, $img:file, $type:png, $repeat:no-repeat) {
@@ -44,3 +45,6 @@
 @function restoH(){
 	@return (8rem - $border-width);
 }
+=======
+}
+>>>>>>> ba0174dde9436a50f4c8d54dce958786cf90bd4f

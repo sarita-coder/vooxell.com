@@ -29,6 +29,7 @@ form,fieldset,input,textarea,p,blockquote,th,td, section {
     padding: 0;
     margin: 0;
 }
+
 body{
 	//background-image: url('../img/demo.jpg');
 	background:$negro;
@@ -52,15 +53,31 @@ h2{
 h2,h3,h4,h5,h6{
 	line-height:1.1;
 	font-family:$font-segoeui-bold;
-	//font-family: 'Bebas Neue Regular', sans-serif;
 	margin: 0px;
-	//z-index:3!important;
+
+p{
+	font-family: $font-Oxygen;
+	font-weight:100;
+	line-height: 1.8;
+	font-size: 1.15rem;
+	z-index:3!important;
+}
+h2{
+	font-size: 5.7rem;
+}
+
+h2,h3,h4,h5,h6{
+	font-family: 'Bebas Neue Regular', sans-serif;
+	margin: 0px;
+	z-index:3!important;
 }
 
 
   /* seleccion */
 ::-moz-selection { color: white;  background: none; }
 ::selection      { color: white;  background: none; } 
+
+
 
  /** scroll y efecto */
 
@@ -79,6 +96,8 @@ h2,h3,h4,h5,h6{
 }
 .pd-lr-4{
 	padding:4% 4%;
+
+
 }
 .pd-2{
 	margin-top:2rem;
@@ -96,6 +115,7 @@ h2,h3,h4,h5,h6{
 	color:black;
 }
 
+
 /**control del fullpages horizontal**/
 
 .fp-controlArrow.fp-next{
@@ -103,7 +123,7 @@ h2,h3,h4,h5,h6{
 }
 .fp-controlArrow.fp-prev{
 	border-color:transparent  $bg-verde transparent transparent !important;
-	z-index:1000000000;
+	z-index:10;
 }
 .white{
 	color:white;
@@ -112,4 +132,16 @@ h2,h3,h4,h5,h6{
 
 .fp-controlArrow.fp-prev , .fp-controlArrow.fp-next {
 	visibility:hidden;
+}
+.btn-verde{
+	background:$bg-verde;
+}
+.row, .col, .waves-effect, h2{
+	z-index:3;
+}
+.fp-controlArrow{
+	border-color:$bg-verde;
+}
+.white{
+	color:white;
 }

@@ -1,3 +1,4 @@
+
 /* Particulas config content (json): */
 $(document).ready(function(){
   var ancho=$(window).width();
