@@ -41,12 +41,12 @@ $(document).ready(function(){
           }
         },
         "size": {
-          "value": 3,
+          "value": 2.6,
           "random": true,
           "anim": {
             "enable": false,
-            "speed": 14.617389821424212,
-            "size_min": 24.362316369040354,
+            "speed": 14,
+            "size_min": 24,
             "sync": false
           }
         },
@@ -93,11 +93,11 @@ $(document).ready(function(){
             }
           },
           "bubble": {
-            "distance": 303.7898019343676,
+            "distance": 303,
             "size": 3,
             "duration": 1,
             "opacity": 0.9,
-            "speed": 1
+            "speed": 5
           },
           "repulse": {
             "distance": 200,

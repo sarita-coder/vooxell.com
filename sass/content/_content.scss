@@ -49,12 +49,13 @@
 
 /**Menu Barra -> X ***/
 .menu-bar{
+	box-shadow: 1px 0px 3px 3px rgba(53, 49, 49, 0.28);
 	border-radius:50px;
 	border:0.5px solid white;
 	height:40px;
 	padding:8px 4px;
 	position:absolute;
-	right:-120px;
+	right:-95px;
 	top:50px;
 	width:40px;
 }
@@ -102,11 +103,10 @@
 		.hover-nav{
 			position:relative;
 			padding-left: 1rem;
-			width: 12rem;
+			width: 12.6rem;
 			span{
 				position: relative;
 				font-family:$font-Oxygen;
-				font-size: 0.9rem;
 				color:white;
 			}
 			span:last-child{
@@ -122,25 +122,48 @@
 		padding-left: 0rem!important;
 		transition: all .5s;
 		span{
+			font-size: 1rem;
 			color:white!important;
 			text-shadow: 2px 2px 2px black;
 		}
 		.hover-txt{
 			display:inline-block!important;
 		}
+
+		.slide-2 span {
+			color:black!important;
+			text-shadow: 2px 2px 2px white;
+		}
+		.slide-3 span {
+			color:$verde!important;
+		}
+		.slide-4 span {
+			color:$verde!important;
+		}
+		.slide-5 span {
+			color:white;
+			text-shadow: 2px 2px 2px $morado;
+		}
 	}
 }
 
-.hover-nav:hover .hover-bajar{
+.hover-nav{
+	&:hover span{
+		color:$verde!important;
+		text-shadow: 2px 1px 2px rgb(0, 0, 0);
+	}
+	&:hover .hover-bajar{
     bottom: -3px;
     left: 1.5; 
-}
-.hover-nav:hover .hover-subir{
-   left: 1.5;
-    top:-3px;
-}
-.hover-nav:hover .hover-txt{
-	display:inline-block!important;
+    }
+    &:hover .hover-subir{
+  	 	left: 1.5;
+    	top:-3px;
+	}
+	&:hover  .hover-txt{
+		display:inline-block!important;
+
+	}
 }
 
 /**logo*/
@@ -167,9 +190,9 @@
 	z-index:0;
 	//float:left;
 }
-  .slides1,.slides2 {
-    visibility: hidden;
-  }
+.slides1,.slides2 {
+	visibility: hidden;
+}
 
 /**** Personalizacion de section */
 #fullpage{
@@ -194,11 +217,14 @@
 			position: absolute;
 			bottom:0.5%;
 			right: 0.3%;
+			//right: -24%;
 
 		}
 		.logo-small-blanco{
 			height: 6rem;
 		}
+		
+
 	}
 	section:nth-child(1){
 		background: black;
@@ -215,6 +241,7 @@
 	}	
 	section:nth-child(2){
 		@include background(bg,somos,jpg);
+
 		h2, h3{
 			@include txt_h2 (white);
 		}
@@ -225,6 +252,8 @@
 
 
 		}
+
+
 		 
 	}
 	section:nth-child(3){
@@ -280,14 +309,11 @@
 		.title{
 			width: 100%;
 		}
-
-
-
 	}
 	section:nth-child(6){
-		//@include background(bg,vision,jpg);
-		
-		background:$plomo;
+		padding-top: 0;
+		@include background(bg,final-bg,png);
+		background-color: black;
 		h2, h3{
 			@include txt_h2 (white);
 		}
@@ -296,10 +322,22 @@
 			color:white;
 			margin: 0.9rem 0 2rem;
 		}
+		.title{
+			padding-top:5%;
+		}
+		.bg-contacto{
+		    width: 100%;
+		    height: 100%;
+		  	background:  rgba(19, 17, 17, 0.57);
+		   // background: rgba(8, 8, 8, 0.92);
+		}
 	}	
 }
 
-
+.title-h3{
+    position: relative;
+    top: 2.5rem;
+}
 .sobreNosotros, .contenido{
 	height: 100%;
     display: flex;
@@ -342,7 +380,7 @@
 				}
 			}
 			&:hover a {
-				color: #27fc0d!important;
+				color:$verde!important;
 		    	text-shadow: 2px 2px 2px #403d3d;
 			}
 			&:hover span .hover{
@@ -364,7 +402,7 @@
 		background:linear-gradient(0deg, rgba(50, 50, 51, 0.87), rgba(255, 254, 254, 0));
     	padding: 20% 8% 1.5%;
 	    .position{
-	    	width:60%;
+	    	width:50%;
 	    	p{
 	    		padding-left:0; 
 	    		margin: 0.25rem 0 0.5rem;
@@ -418,6 +456,8 @@
 	color:white;
 
 }
+
+
 .Pilares{
 	display:flex;
 	width:100%;
@@ -492,48 +532,48 @@
 
 
 .centrando{
-	margin-top:10rem;
+	margin-top:5rem;
 }
 .servicio{
 	display:flex;
 	align-items: center;
 	justify-content: center;
 	margin-top: 5%;
-	.lado{
-		height: 25rem;
-		width:45%;
-		padding: 8%;
-		border-color: $bg-verde;
-		border-width: 3px;
-		display: flex;
-	    justify-content: center;
-	    align-items: center;
+	.div{
+		width:50%;
+		.lado{
+			width:100%;
+			height: 25rem;
+			padding: 8%;
+			border-color: $bg-verde;
+			border-width: 3px;
+			display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    p{
+		    transform: skewY(10deg);	
+		    }
+		}
 
-	    h3{
-		transform: skewY(-20deg);
-	    }
-	    p{
-	    transform: skewY(20deg);	
-	    }
-	}
+		.derecha{
+			overflow:hidden;
+			width:100%;
+			padding-left:0%;
+			transform: skewY(10deg);
+		    border-top-style: dashed;
+		    border-bottom-style: dashed;
+			padding-right: 0;
+		}
+		.izquierda{
+			padding-right:0%; 
+			text-align: justify;
+			border-left-style:  dashed;
+			transform: skewY(-10deg);
+		    border-top-style:dashed;
+		    border-bottom-style:dashed;
+		}
+	}	
 
-	.derecha{
-		padding-left:0%;
-	
-		transform: skewY(20deg);
-	    border-top-style: dashed;
-	    border-bottom-style: dashed;
-		text-align:left;
-
-	}
-	.izquierda{
-		padding-right:0%; 
-		text-align: justify;
-		border-left-style:  dashed;
-		transform: skewY(-20deg);
-	    border-top-style:dashed;
-	    border-bottom-style: dashed;
-	}
 }
 
 .bg-alianza{
@@ -541,9 +581,32 @@
 	height:100%;
 	//background:linear-gradient(rgba(102, 113, 116, 0.81), rgba(62, 56, 56, 0));
 
-
+	.title_alianza{
+		position: relative;
+		top:-3rem;
+		padding-left: 8%;
+	}
 }
 
+.derecha-BI:after{
+
+	background: url(../vooxell/iNTELIGENCIADENEGOCIOS/45108583.jpg);
+}
+.derecha-CE:after{
+	
+	background: url(../vooxell/CONSULTORIAEXPERTA/23700933.jpg);
+}
+.derecha-DA:after{
+
+	background: url(../vooxell/dESARROLLOAGIL/29730631.jpg);
+}
+.derecha:after{
+    content: " ";
+    background-size: 100% 100%;
+    width: 100%;
+    height: 30rem;
+	height:30rem;
+}
 
 .contenedor-alianza{
 	background:white;
@@ -557,7 +620,7 @@
 		justify-content: space-around;
 	   	width: 20%;
 	   	img{
-	   		    height: 3.9rem;
+	   		    height: 3.4rem;
 	   	}
 	}
 }
@@ -606,10 +669,12 @@
 		margin-top: 1rem;
 		border-radius:25px;
 		background: white;
+		font-weight: bold;
 		&:hover{
 
-			background: black;
-			color:white;
+			background: $verde;
+			color:black;
+			
 		}
 	}
 
@@ -628,8 +693,6 @@
 	background-image: url(../img/contact/dir.svg);
 }
 
-
-
 .icon-contacto{
 	margin-top: 20px;
 	li{
@@ -639,6 +702,7 @@
     	background-repeat: no-repeat;
     	a{
     		color:white;
+    		font-size: 1.1rem;
     	}
     	&:hover{
     		opacity: 0.7;
@@ -647,6 +711,7 @@
 	span{
 		color:white;
 		margin-left: 5rem;
+		font-size: 1.1rem;
 	}
 	.siguenos{
 		a{
@@ -666,12 +731,26 @@
 	}
 
 }
-
-input[type=text]{
-	border-bottom: 1px solid #fffefe;
+//#00ffda;
+input{
+	color: $verde;
+    font-size: 1.8rem!important;
+    border-bottom: 1px solid $verde;
 }
-
-
-
-
-
+input:hover, input:focus{
+	border-bottom: 1px solid $verde!important;
+}
+::-webkit-input-placeholder {
+   color: $plomo;
+   	opacity:0.6;
+   	font-size: 1.2rem ;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: $plomo;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $plomo;  
+}
+:-ms-input-placeholder {  
+   color: $plomo;  
+}
