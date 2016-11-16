@@ -1,13 +1,32 @@
-      fullpage.initialize('#fullpage', {
-        anchors: ['slide-1', 'slide-2', 'slide-3', 'slide-4', 'slide-5', 'slide-6'],
-        menu: '#nav-parallax',
-        verticalCentered: false,
-        easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)',
-        //slidesNavigation: true,
-        navigation: false,
+fullpage.initialize('#fullpage', {
+  anchors: ['slide-1', 'slide-2', 'slide-3', 'slide-4', 'slide-5', 'slide-6'],
+  menu: '#nav-parallax',
+  verticalCentered: false,
+  easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)',
+  //slidesNavigation: true,
+  navigation: false,
+
+  'afterLoad': function(anchorLink, index){
 
 
-      });
+  },
+
+  'afterLoad': function(anchorLink, index){
+    if(index == 4){
+      $('.BTN').css("display","none");
+    }
+    else if (index == 2){
+      $('.BTN').css("display","none");
+      //$('#BI, #DA, #CE').addClass('.cerrar');
+    }
+  },
+
+
+});
+
+
+
+
 
   $('#menu-des').on('click',function(){
     $('#main-nav').toggleClass('mostrar')
@@ -20,7 +39,7 @@ $(document).ready(function() {
   Materialize.updateTextFields();
 
     $('.BI').click(function(){
-        $('#BI').fadeIn(1000);
+      $('#BI').fadeIn(1000);
     })
     $('.DA').click(function(){
       $('#DA').fadeIn(1000);
