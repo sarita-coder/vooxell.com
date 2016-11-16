@@ -5,12 +5,6 @@ fullpage.initialize('#fullpage', {
   easingcss3: 'cubic-bezier(0.175, 0.885, 0.320, 1.275)',
   //slidesNavigation: true,
   navigation: false,
-
-  'afterLoad': function(anchorLink, index){
-
-
-  },
-
   'afterLoad': function(anchorLink, index){
     if(index == 4){
       $('.BTN').css("display","none");
@@ -24,17 +18,12 @@ fullpage.initialize('#fullpage', {
 
 });
 
+$('#menu-des').on('click',function(){
+  $('#main-nav').toggleClass('mostrar')
+  $('#menu-des').toggleClass('mover')
+})
 
-
-
-
-  $('#menu-des').on('click',function(){
-    $('#main-nav').toggleClass('mostrar')
-    $('#menu-des').toggleClass('mover')
-  })
-  
 $(document).ready(function() {
-
 
   Materialize.updateTextFields();
 

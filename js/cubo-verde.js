@@ -77,7 +77,7 @@ $(document).ready(function(){
         "events": {
           "onhover": {
             "enable": true,
-            "mode": "bubble"
+            "mode": "remove"
           },
           "onclick": {
             "enable": true,
@@ -107,7 +107,7 @@ $(document).ready(function(){
             "particles_nb": 4
           },
           "remove": {
-            "particles_nb": 2
+            "particles_nb": 1
           }
         }
       },

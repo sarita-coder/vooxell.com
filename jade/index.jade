@@ -4,6 +4,8 @@ html(lang="en")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width")
+		meta(name="description" content="VOOXELL is a BI consulting company.")
+		meta(name="keywords" content="VOOXELL, consulting, BI, Business Information, Data Warehouse, Data Vault, Desarrollo Agil, Consultoria, Partner IBM, Partner Tablue, Partner ca, Partner Oracle")
 		title vooxell
 		link(rel="icon" type="image/png" href="img/bg/cubo.png")
 		link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
@@ -13,14 +15,12 @@ html(lang="en")
 	body
 		nav#main-nav.main-nav
 			ul.menu
-				+nav_des(1,"","#slide-1","link-1","0","0","INICIO ","#section1")
-				+nav_des(1,"","#slide-2","link-2","0","1","QUIÉNES SOMOS ","#section2")
-				+nav_des(1,"","#slide-3","link-3","0","2","NUESTROS SERVICIOS ","#section3")
-				+nav_des(1,"","#slide-4","link-4","0","3","NUESTROS PILARES ","#section4")
-				+nav_des(1,"","#slide-5","link-5","0","4","ALIANZAS ESTRATÉGICAS","#section5")
-				+nav_des(1,"","#slide-6","link-6","0","5","CONTACTOS ","#section6")
-				+nav_des(0,"ei-sc-twitter","https://twitter.com/intent/tweet?url=http://www.vooxell.com&text=Voxell.com: You have data, we give you a new dimension.","white","","","")
-				+nav_des(0,"ei-sc-facebook","","white","","","")
+				+nav_des(1,"","#slide-1","link-1","0","0","Inicio ","#section1")
+				+nav_des(1,"","#slide-2","link-2","0","1","Nuestra Misión","#section2")
+				+nav_des(1,"","#slide-3","link-3","0","2","Nuestros Servicios ","#section3")
+				+nav_des(1,"","#slide-4","link-4","0","3","Nuestros Pilares ","#section4")
+				+nav_des(1,"","#slide-5","link-5","0","4","Nuestras Alianzas ","#section5")
+				+nav_des(1,"","#slide-6","link-6","0","5","Contáctanos ","#section6")
 				
 			.menu-bar#menu-des(onclick="Materialize.showStaggeredList('#main-nav.main-nav')")
 				#irarriba.uno.bar
@@ -30,11 +30,11 @@ html(lang="en")
 		nav#nav-parallax
 			ul.nav
 				+nav-parallax("slide-1","slide-1","0","0","Inicio ")
-				+nav-parallax("slide-2","slide-2","0","1","Quiénes Somos")
+				+nav-parallax("slide-2","slide-2","0","1","Nuestra Misión")
 				+nav-parallax("slide-3","slide-3","0","2","Nuestros Servicios ")
 				+nav-parallax("slide-4","slide-4","0","3","Nuestros Pilares ")
-				+nav-parallax("slide-5","slide-5","0","4","Alianzas Estratégicas")
-				+nav-parallax("slide-6","slide-6","0","5","Contactos ")
+				+nav-parallax("slide-5","slide-5","0","4","Nuestras Alianzas")
+				+nav-parallax("slide-6","slide-6","0","5","Contáctos ")
 		
 		#fullpage
 			section.section.section-1
@@ -92,26 +92,27 @@ html(lang="en")
 			section.section.section-4
 				.slide
 					.Pilares
+						.pilar1.pilar
+							.pilar-bg
 						.pilar3.pilar
 							.pilar-bg
 						.pilar2.pilar
 							.pilar-bg
-						.pilar1.pilar
-							.pilar-bg
+						
 				.slide.slide1
 				.slide.slide2
 
 
 
 			section.section.section-5
-				img.logo-small.logo-small-blanco(src="img/bg/logo-small-blanco.png")
+				img.logo-small.logo-small(src="img/bg/logo-small.png")
 				.bg-alianza
 					.alianza
 						.title_alianza
-							+title_h2("Nuestras","Alianzas Estratégicas")
+							+title_h2("Nuestras","Alianzas")
 						.bg
 							.position
-								p Con el fin de ofrecer a nuestros clientes soluciones y productos (hardware y software) de la más alta calidad y rendimiento, hemos establecido alianzas a nivel mundial que nos permitan garantizar nuestra acreditación y conocimientos, así como ofrecer el servicio de implementación, soporte y orientación de los productos que se adquieran.
+								p Con el fin de ofrecer a nuestros clientes soluciones y productos (hardware y software) de la más alta calidad y rendimiento, hemos establecido alianzas estratégicas a nivel mundial que nos permitan garantizar nuestra acreditación y conocimientos, así como ofrecer el servicio de implementación, soporte y orientación de los productos que se adquieran.
 								.contenedor-alianza
 									.col-s5
 										img(src="img/partner/ca-small.jpg")
@@ -126,7 +127,7 @@ html(lang="en")
 										img(src="img/partner/ibm-small.jpg")
 
 			section.section.section-6
-				img.logo-small.logo-small-blanco(src="img/bg/logo-small-blanco.png")
+				img.logo-small.logo-small(src="img/bg/logo-small.png")
 				.bg-contacto
 					.container
 						.row
@@ -145,11 +146,7 @@ html(lang="en")
 									.siguenos
 										span Síguenos en: 
 										a(href="#!")
-											i.fa.fa-facebook.fa-2x
-										a(href="#!")
 											i.fa.fa-linkedin.fa-2x
-										a(href="#!")
-											i.fa.fa-youtube-play.fa-2x
 
 							.col.l6.s12
 								.formulario

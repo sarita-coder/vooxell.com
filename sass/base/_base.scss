@@ -59,8 +59,8 @@ h2,h3,h4,h5,h6{
 
 
   /* seleccion */
-::-moz-selection { color: white;  background: black; }
-::selection      { color: white;  background: black; } 
+::-moz-selection { color: white;  background: none; }
+::selection      { color: white;  background: none; } 
 
  /** scroll y efecto */
 
