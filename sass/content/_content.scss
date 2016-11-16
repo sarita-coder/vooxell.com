@@ -1,6 +1,6 @@
 /***Header Deslizable**/
 .main-nav{
-	background: $bg-verde;
+	background: $plomo;
 	border-right: 0.01em solid rgba(216, 214, 214, 0.9);
 	height:100vh;
 	left:-35vw;
@@ -55,7 +55,7 @@
 	height:40px;
 	padding:8px 4px;
 	position:absolute;
-	right:-120px;
+	right:-95px;
 	top:50px;
 	width:40px;
 }
@@ -98,18 +98,6 @@
 	top:25%;
 	.menu_item{
 	line-height:2.7;
-	border-right: 0.01em solid rgba(47, 41, 41, 0.21);
-	height: 100vh;
-	left: 0em; 
-	position:fixed;
-    width:5%; 
-    z-index: 100;
-}
-
-.nav{
-	position:relative;
-	top:20%;
-	.menu_item{
 	position:relative;
 	padding-left:2rem;	
 		.hover-nav{
@@ -120,13 +108,6 @@
 				position: relative;
 				font-family:$font-Oxygen;
 				color:white;
-			padding-left: 3rem;
-			width: 12rem;
-			span{
-				position: relative;
-				font-family:$font-Oxygen;
-				font-size: 0.8rem;
-				color:$txt-white;
 			}
 			span:last-child{
 				display: none;
@@ -144,7 +125,6 @@
 			font-size: 1rem;
 			color:white!important;
 			text-shadow: 2px 2px 2px black;
-			color:#000000!important;
 		}
 		.hover-txt{
 			display:inline-block!important;
@@ -249,58 +229,6 @@
 	section:nth-child(1){
 		background: black;
 		padding-top: 0;
-	}
-}
-
-.hover-nav:hover .hover-bajar{
-    bottom: -3px;
-    left: 1.5; 
-}
-.hover-nav:hover .hover-subir{
-   left: 1.5;
-    top:-3px;
-}
-.hover-nav:hover .hover-txt{
-	display:inline-block!important;
-}
-/**logo*/
-.logo{
-	//position:fixed;
-	top:0;
-	width:60%;
-	//background:red;
-	.logo-vooxel{
-		display: table;
-		margin:auto;
-		//background: green;
-		//padding-top: ;
-		.VOOXELL{
-			width: 30rem;
-			height: 10rem;
-			z-index: 1000;
-			-webkit-transition: width .5s, height .5s, margin .5s;
-		}
-	}
-}
-
-
-/*  --------------------------------------------- */
-/* Large screen layout ----------- */  
-/* slide layout --------------------------------------------- */
-#particles{
-	width: 100%;
-	height:950vh;
-	position:fixed;
-	z-index:2;
-	opacity:0.3;
-	//float:left;
-}
-
-/**** Personalizacion de section */
-
-#fullpage{
-	section:nth-child(2){
-		background:$bg-black;
 		h2{
 			color:white;
 		}
@@ -321,22 +249,35 @@
 			font-family:$font-segoeui;
 			color:white;
 			text-align: justify;
+
+
 		}
-	 
+
+
+		 
 	}
 	section:nth-child(3){
 		@include background(bg,servicio-sin-logo2,jpg);
+		span{
+			color:$bg-verde;
+			font-family:$font-bebas;
+			font-size: 2rem;
+			font-weight: 600;
+		}
+		h2,h3{
+			@include txt_h2 (white);
+		}
+		p{color:white}
+		a{
+			color:white;
+		    font-size: 1.3rem;
+		    font-weight: 500;
 
-			font-size: 1.2rem;
 		}
-	}	
-	section:nth-child(3){
-		background:$bg-black;
-		h2{
-			color:white;
-		}
-		p{
-			color:white;
+
+		button{
+			background: none;
+			border:none;
 		}
 	}
 	section:nth-child(4){
@@ -344,9 +285,9 @@
 		padding-top: 0;
 		h2,h3{
 			@include txt_h2 ($verde);
-
-		h2{
-			color:black;
+		}
+		p{
+			color:white;
 		}
 	}
 	section:nth-child(5){
@@ -446,100 +387,7 @@
 				display: inline-block;
 			}
 			&:hover span .sin-hover{
-	
 				display: none;
-		}
-	}
-}
-
-/**** texto para el cuerpo y titulo **/
-
-/** SLIDER 1 */
-.modal-trigger, .modal{
-	z-index:1000;
-}
-/**  Nuestros servicios **/
-.circle{
-	display:inline-block;
-	height:3rem;
-	width:3rem;
-	background:$bg-verde;
-	border-radius:50%;
-	z-index:3;
-	.check{
-    	position: relative;
-   	 	top: 0.2rem;
-    	left: 0.6rem;
-    	color:white;
-	}
-}
-.circle:hover .check{
-	color:$bg-verde;
-}
-.circle:hover{
-	background:black;
-}
-/*********  pilares ******/
-.ico-img{	
-	img{
-		background: white;
-		height:5.5rem;
-		width:5.5rem;
-	}
-}
-.ico-img:hover{
-	img{
-		background:black;
-		z-index:4;
-	}
-}	
-
-/*** Perfiles */
-.Perfiles-js{
-	position:float;
-	z-index:3;
-	right:0;
-	.nav{
-		position: absolute;
-    	top: 30%;
-   		right: 10%;
-		ul{
-			li{
-				position: relative;
-				z-index:3;
-				.active{
-					opacity: 1;
-					color:white;
-				}
-				a{
-					font-family:$font-bebas;
-					font-size: 2rem;
-					background: none;
-					width: 8rem;
-					color:white;
-					opacity: 0.2;
-				}
-
-				span{
-					background: white;
-					color:white;
-					}
-			}
-			li:hover a{
-				color:white;
-				opacity: 1;
-			}
-	
-			li:hover .linea{
-				background: white;
-				color:white;
-				display: inline-block;
-				height: 0.05rem;
-				margin-left: 6px;
-				position: absolute;
-				right: -2.5rem;
-				top: 1rem;
-				width:2rem;
 			}
 		}
 	}
@@ -777,7 +625,35 @@
 	}
 }
 
+ 
 
+.form{
+	position:relative;
+	input{
+	margin:0;
+	width:100%;
+
+	}
+	::-webkit-input-placeholder {
+   		color: white;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	   color: white;  
+	}
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: white;  
+	}
+	:-ms-input-placeholder {  
+	   color: white;  
+	}
+	span{
+		color: #fff;
+	    font-size: 10px;
+	    position: absolute;
+	    right: 10px;
+	    top: 6px;
+	}
+ }
 	
 .btnpost{
 	float: right;
@@ -878,6 +754,3 @@ input:hover, input:focus{
 :-ms-input-placeholder {  
    color: $plomo;  
 }
-
-
-
