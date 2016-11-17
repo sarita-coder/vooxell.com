@@ -6349,7 +6349,7 @@ form, fieldset, input, textarea, p, blockquote, th, td, section {
   margin: 0; }
 
 body {
-  background: #231F20; }
+  background: black; }
 
 /****  fonts ****/
 p {
@@ -7078,7 +7078,6 @@ input:focus {
     width: 74%; }
 
   #menu-des {
-    background: black;
     right: -65px;
     top: 15PX; }
 
@@ -7116,8 +7115,14 @@ input:focus {
   #fullpage section:nth-child(5) {
     background-size: cover;
     margin-top: 0.5rem; }
+    #fullpage section:nth-child(5) .title_alianza {
+      top: -2%; }
+  #fullpage section:nth-child(6) .title {
+    padding-top: 12%; }
   #fullpage section:nth-child(6) h2 {
     margin: 1rem 0; }
+  #fullpage section:nth-child(6) .logo-small {
+    z-index: 100005; }
 
   .formulario {
     display: none; }
@@ -7146,13 +7151,17 @@ input:focus {
     height: 100vh; }
 
   .centrando {
-    margin: 0; }
+    margin-top: 4rem; }
     .centrando .servicio .lado {
       height: 22rem; }
+    .centrando .servicio .derecha:after {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
 
   .Pilares {
     background-size: 100% 100%;
-    background-image: url(../img/bg/experiencia.jpg);
+    background-image: url(../img/bg/eficiencia.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%; }
@@ -7161,7 +7170,7 @@ input:focus {
 
   .slide1 {
     display: visible;
-    background-image: url(../img/bg/excelencia.jpg);
+    background-image: url(../img/bg/experiencia.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -7169,7 +7178,7 @@ input:focus {
 
   .slide2 {
     display: visible;
-    background-image: url(../img/bg/eficiencia.jpg);
+    background-image: url(../img/bg/excelencia.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;

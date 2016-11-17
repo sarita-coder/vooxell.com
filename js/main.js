@@ -6,12 +6,21 @@ fullpage.initialize('#fullpage', {
   //slidesNavigation: true,
   navigation: false,
   'afterLoad': function(anchorLink, index){
-    if(index == 4){
+    if(index == 4 || index == 6){
       $('.BTN').css("display","none");
+      $('#menu-des').css("border-color","#27fc0d");
+      $('.uno, .dos, .tres').css("background","#27fc0d");
+
     }
-    else if (index == 2){
+    else if (index == 5 || index == 1){
       $('.BTN').css("display","none");
-      //$('#BI, #DA, #CE').addClass('.cerrar');
+      $('#menu-des').css("border-color","white");
+      $('.uno, .dos, .tres').css("background","white");
+    }
+    else if (index == 3 || index == 2){
+      $('#menu-des').css("border-color","black");
+      $('.uno, .dos, .tres').css("background","black");
+
     }
   },
 

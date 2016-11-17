@@ -39,7 +39,7 @@
     width: 74%;
   }
   #menu-des{
-    background:black;
+    //background:black;
     right: -65px;
     top: 15PX;
   }
@@ -91,11 +91,20 @@
     section:nth-child(5){
       background-size:cover;
       margin-top: 0.5rem;
+      .title_alianza{
+        top:-2%;
+      }
       
     }
-    section:nth-child(6){  
+    section:nth-child(6){
+      .title{
+        padding-top:12%;
+      } 
       h2{
         margin: 1rem 0;
+      }
+      .logo-small{
+        z-index:100005;
       }
     } 
   }
@@ -133,32 +142,35 @@
         height:100vh;
   }
   .centrando{
-
-    margin:0;
+    margin-top: 4rem;
     .servicio{
       .lado{
         height:22rem;
       }
-      .izquierda{
-
+      .derecha:after{
+        background-size:cover;;
+        background-repeat: no-repeat;
+        background-position: center;
       }
     }
   }
   .Pilares{
     background-size:100% 100%;
-    @include background(bg,experiencia,jpg);
+    @include background(bg,eficiencia,jpg);
     .pilar{
       display:none;
     } 
   }
   .slide1{
     display:visible;
-    @include background(bg,excelencia,jpg);
+    @include background(bg,experiencia,jpg);
+
+
     background-size:100% 100%;
   }
   .slide2{
     display:visible;
-    @include background(bg,eficiencia,jpg);
+    @include background(bg,excelencia,jpg);
     background-size:100% 100%;
   }
 
