@@ -35,6 +35,10 @@ $('#menu-des').on('click',function(){
 $(document).ready(function() {
 
   Materialize.updateTextFields();
+  
+    $('#btn-contact').click(function(){
+      $('.contacto-responsive').fadeIn(1000);
+    }) 
 
     $('.BI').click(function(){
       $('#BI').fadeIn(1000);

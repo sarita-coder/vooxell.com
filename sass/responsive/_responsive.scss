@@ -108,7 +108,7 @@
       }
     } 
   }
-  .formulario {display:none}
+  //.formulario {display:none}
   .sobreNosotros  .bg, .Servicios .bg, .alianza .bg {
       padding: 30% 5% 5%;
       background:linear-gradient(0deg, rgb(50, 50, 51), rgba(255, 254, 254, 0));
@@ -202,9 +202,14 @@
     }
   }
 
-
-
-
+  #btn-contact{
+    position: fixed;
+    top:0;
+    right:0;
+    background:black;
+    color:$verde;
+    
+  }
 
 
 }

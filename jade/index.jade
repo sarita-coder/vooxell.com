@@ -1,4 +1,5 @@
 include mixins/mixin.jade
+
 <!DOCTYPE html>
 html(lang="en")
 	head
@@ -35,7 +36,7 @@ html(lang="en")
 				+nav-parallax("slide-4","slide-4","0","3","Nuestros Pilares ")
 				+nav-parallax("slide-5","slide-5","0","4","Nuestras Alianzas")
 				+nav-parallax("slide-6","slide-6","0","5","Contáctos ")
-		
+
 		#fullpage
 			section.section.section-1
 				#particles
@@ -102,8 +103,6 @@ html(lang="en")
 				.slide.slide1
 				.slide.slide2
 
-
-
 			section.section.section-5
 				img.logo-small.logo-small(src="img/bg/logo-small.png")
 				.bg-alianza
@@ -136,21 +135,22 @@ html(lang="en")
 							.col.l6.s12
 								ul.icon-contacto
 									li.text-mail
-										a(href="#!") comunicaciones@vooxell.com
+										a(href="mailto:comunicaciones@vooxell.com") comunicaciones@vooxell.com
 									li.text-cel
 										a(href="#!") (+51 721 6755)
 									li.text-map
+						
 										a(href="#!") http://www.vooxell.com
 									li.text-stree
 										a(href="#!") Av. Larco 743 Of. 604, Miraflores, Lima 27, Perú
 									.siguenos
 										span Síguenos en: 
-										a(href="#!")
+										a(href="#!" target="_blank")
 											i.fa.fa-linkedin.fa-2x
-								button.contacto-responsive 
+									//- button.btn.contacto-responsive Contactenos
+		
 
-
-							.col.l6.s12
+							.col.l6.s12.hide-on-small-only.contacto-responsive
 								.formulario
 									form(name="form1" id="form1" action="" method="POST" onsubmit="return false")
 										.form

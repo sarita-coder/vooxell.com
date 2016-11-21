@@ -24,7 +24,7 @@
 	.menu__link{
 		padding-right: 1rem;
 		span{
-			font-family: $font-bebas;
+			font-family: $font-segoeui;
 			text-decoration:none;
 		}
 		.nav-text{
@@ -106,7 +106,7 @@
 			width: 12.6rem;
 			span{
 				position: relative;
-				font-family:$font-Oxygen;
+				font-family:$font-segoeui;
 				color:white;
 			}
 			span:last-child{
@@ -259,10 +259,10 @@
 		 
 	}
 	section:nth-child(3){
-		@include background(bg,servicio-sin-logo2,jpg);
+		@include background(bg,servicio-sin-logo,jpg);
 		span{
 			color:$bg-verde;
-			font-family:$font-bebas;
+			font-family:$font-segoeui;
 			font-size: 2rem;
 			font-weight: 600;
 		}
@@ -325,7 +325,7 @@
 			margin: 0.9rem 0 2rem;
 		}
 		.title{
-			padding-top:8%;
+			padding-top:6%;
 		}
 		.bg-contacto{
 		    width: 100%;
@@ -508,7 +508,7 @@
 		@include background(bg,eficiencia-elemento,png);
 	}
 .pilar2:hover .pilar-bg{
-		@include background(bg,excelencia-elemento-logo,png);
+		@include background(bg,excelencia-elemento,png);
 		transition:all .5s;
 }
 .pilar3:hover .pilar-bg{
@@ -591,7 +591,7 @@
 
 .derecha-BI:after{
 
-	background: url(../vooxell/iNTELIGENCIADENEGOCIOS/45108583.jpg);
+	background: url(../vooxell/iNTELIGENCIADENEGOCIOS/BI.jpg);
 }
 .derecha-CE:after{
 	
