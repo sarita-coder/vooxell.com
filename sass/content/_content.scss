@@ -293,7 +293,7 @@
 		}
 	}
 	section:nth-child(5){
-		padding-top: 0;
+		padding-top: 5%;
 		@include background(bg,alianzas_verde,jpg);
 		h2,h3{
 			line-height:1;
@@ -325,7 +325,7 @@
 			margin: 0.9rem 0 2rem;
 		}
 		.title{
-			padding-top:6%;
+			padding-top:5%;
 		}
 		.bg-contacto{
 		    width: 100%;
@@ -584,7 +584,6 @@
 
 	.title_alianza{
 		position: relative;
-		top:-3rem;
 		padding-left: 8%;
 	}
 }
@@ -672,6 +671,7 @@
 		padding: 1.5rem 0.5rem;			
 	}
 	button{
+		font-weight: bold;
 		color:black;
 		margin-top: 1rem;
 		border-radius:25px;
